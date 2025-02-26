@@ -221,16 +221,16 @@ async def autocomplete_quran_translations(_, user_input: str) -> list:
 async def autocomplete_hadiths(_, user_input: str) -> list:
     if not user_input:
         return [
-            '[Sunni] (English) Sahih al Bukhari',
-            '[Sunni] (English) Sahih Muslim',
-            '[Sunni] (English) Sunan an Nasai',
-            '[Sunni] (English) Sunan Abu Dawud',
-            '[Sunni] (English) Jami At Tirmidhi',
-            '[Sunni] (English) Sunan Ibn Majah',
-            '[Sunni] (English) Muwatta Malik',
-            '[Sunni] (English) Forty Hadith of Shah Waliullah Dehlawi',
-            '[Sunni] (English) Forty Hadith of an-Nawawi',
-            '[Sunni] (English) Forty Hadith Qudsi',
+            '[Sunni] [Salafi] (English) Sahih al Bukhari',
+            '[Sunni] [Salafi] (English) Sahih Muslim',
+            '[Sunni] [Salafi] (English) Sunan an Nasai',
+            '[Sunni] [Salafi] (English) Sunan Abu Dawud',
+            '[Sunni] [Salafi] (English) Jami At Tirmidhi',
+            '[Sunni] [Salafi] (English) Sunan Ibn Majah',
+            '[Sunni] [Salafi] (English) Muwatta Malik',
+            '[Sunni] [Salafi] (English) Forty Hadith of Shah Waliullah Dehlawi',
+            '[Sunni] [Salafi] (English) Forty Hadith of an-Nawawi',
+            '[Sunni] [Salafi] (English) Forty Hadith Qudsi',
 
             '[Shia] (English) Al-Amālī (Muḥammad al-Mufīd)',
             '[Shia] (English) Al-Amālī (ʿAlī al-Ṣaduq)',

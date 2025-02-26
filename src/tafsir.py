@@ -1,30 +1,10 @@
+from src.enums import Titles
+from src.queryparser import QueryParser
 from src.tafsirapi import TafsirAPI
 from src.utils import Utils
-from src.enums import Titles
 
 
 class Tafsir:
-    @staticmethod
-    def _parse_query(parts: list) -> list:
-        required = []
-
-        for part in parts:
-            pair = part.split('-')
-
-            if len(pair) == 1:
-                required.append(int(part))
-            else:
-                verse = int(pair[0])
-                to_verse = int(pair[1]) + 1
-
-                if to_verse < verse:
-                    to_verse = verse
-
-                for ayah in range(verse, to_verse):
-                    required.append(ayah)
-
-        return required
-
     @staticmethod
     def _response_to_text(chapter: int, response: list) -> str:
         text = f'\n**{Titles.SURAH[chapter]}**\n'
@@ -60,7 +40,7 @@ class Tafsir:
         ayahs = []
 
         try:
-            required = Tafsir._parse_query(parts)
+            required = QueryParser.parse_without_chapters(parts)
         except ValueError:
             return ''
 

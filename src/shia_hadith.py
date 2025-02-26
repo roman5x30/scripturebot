@@ -1,29 +1,9 @@
+from src.queryparser import QueryParser
 from src.thaqalaynapi import ThaqalaynAPI
 from src.utils import Utils
 
 
 class ShiaHadith:
-    @staticmethod
-    def _parse_query(parts: list) -> list:
-        required = []
-
-        for part in parts:
-            pair = part.split('-')
-
-            if len(pair) == 1:
-                required.append(part)
-            else:
-                verse = int(pair[0])
-                to_verse = int(pair[1]) + 1
-
-                if to_verse < verse:
-                    to_verse = verse
-
-                for hadith_no in range(verse, to_verse):
-                    required.append(hadith_no)
-
-        return required
-
     @staticmethod
     def _response_to_text(hadiths: list, english: bool) -> str:
         if len(hadiths) == 0:
@@ -55,7 +35,7 @@ class ShiaHadith:
         book = book[3:]
         hadiths = ThaqalaynAPI.books(book)
         parts = Utils.split_query(query)
-        required = ShiaHadith._parse_query(parts)
+        required = QueryParser.parse_without_chapters(parts)
         response_hadiths = []
 
         for hadith in hadiths:
