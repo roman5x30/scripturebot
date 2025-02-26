@@ -4,11 +4,15 @@
 
 ![](https://img.shields.io/badge/Python-3.8.9-blue.svg) ![](https://img.shields.io/badge/Disnake-2.9.3-blue.svg)
 
+## What texts can I access through bot?
+
+For now, you can access Bible (including deuterocanon), Quran, hadiths and tafsirs.
+
 ## Todo
 
 - [ ] Add councils
 - [x] Add ability to look for shia hadiths
-- [x] Add tafsir slash commands
+- [x] Add tafsir slash command
 
 ## Getting started
 
