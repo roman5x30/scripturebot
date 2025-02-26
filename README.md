@@ -7,9 +7,8 @@
 ## Todo
 
 - [ ] Add councils
-- [ ] Add Georgian translation to Bible
 - [x] Add ability to look for shia hadiths
-- [ ] Add tafsir slash commands
+- [x] Add tafsir slash commands
 
 ## Getting started
 
